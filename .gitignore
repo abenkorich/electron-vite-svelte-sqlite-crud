@@ -1,4 +1,6 @@
 node_modules
+flowbite-admin-dashboard
+flowbite-svelte-admin-dashboard
 dist
 out
 .DS_Store
