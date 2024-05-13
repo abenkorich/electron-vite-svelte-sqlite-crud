@@ -1,23 +1,18 @@
-import {db} from './db';
+import { db } from './db'
+import { productsTableColumns } from './db';
 
 // Function to add a new product
 export const addProductToDB = (product) => {
   console.log('Model >> Product >> addProductToDB Called')
-  const sql = `
-    INSERT INTO products (image, name, model, cost, price, quantity, supplier_id, category_id, description)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-  `;
-  db.run(sql, [
-    product.image,
-    product.name,
-    product.model,
-    product.cost,
-    product.price,
-    product.quantity,
-    product.supplierId,
-    product.categoryId,
-    product.description
-  ], (err) => {
+  
+
+  const placeholders = productsTableColumns.map(() => '?').join(', ');
+
+  // INSERT INTO products ('id','ref','image','nom_commercial','matiere_active','formulation','concentration','category_id','famille_id','fabricant_id','representant_id','fournisseur_id','description','descriptio')
+
+  const sql = `INSERT INTO products VALUES (${placeholders})`;
+
+  db.run(sql, product, (err) => {
     if (err) {
       console.error(err);
       // Handle error

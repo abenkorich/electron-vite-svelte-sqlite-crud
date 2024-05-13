@@ -27,6 +27,7 @@
     "electron-updater": "^6.1.7",
     "flowbite": "^2.3.0",
     "flowbite-svelte": "^0.46.1",
+    "flowbite-svelte-icons": "^1.6.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {

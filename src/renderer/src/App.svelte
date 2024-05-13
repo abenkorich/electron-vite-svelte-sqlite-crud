@@ -3,10 +3,10 @@
   import LeftSideBar from './components/LeftSideBar.svelte'
   import electronLogo from './assets/electron.svg'
 
-  import { Router, Link, Route } from "svelte-routing";
+  import { Router, Route } from "svelte-routing";
 
-  import Dashboard from "./routes/dashboard.svelte";
-  import Product from "./routes/product.svelte";
+  import Dashboard from "./routes/dashboard/dashboard.svelte";
+  import Product from "./routes/product/product.svelte";
 
   export let url = "";
 
