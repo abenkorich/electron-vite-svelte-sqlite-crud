@@ -248,7 +248,7 @@
     </div>
   </section>
   <svelte:fragment slot="footer">
-    <Button>I accept</Button>
+    <Button on:click={handleSubmit}>I accept</Button>
     <Button on:click={() => (showModal = false)} color="alternative">Cancel</Button>
   </svelte:fragment>
 </Modal>

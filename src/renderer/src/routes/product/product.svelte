@@ -50,6 +50,7 @@
 
   // product form
   import ProductForm from './ProductForm.svelte'
+  import ProductImport from './ProductImport.svelte'
 
   // Form Modal
   let formModal = false;
@@ -74,7 +75,8 @@
 </script>
 
 <main class="p-4 sm:ml-64">
-  <ProductForm showModal={formModal}/>
+  <ProductImport />
+  <ProductForm showModal={formModal} />
   <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
     <div class="text-sm breadcrumbs font-medium text-gray-900">
       <Breadcrumb aria-label="Default breadcrumb example">

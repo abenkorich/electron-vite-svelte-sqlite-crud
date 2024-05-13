@@ -20,6 +20,10 @@ const api = {
     console.log('Preload >> updateProduct Recieved from Rendrer')
     ipcRenderer.send('updateProduct', productId, productData)
   },
+  importProducts: (productData) => {
+    console.log('Preload >> importProduct Recieved from Rendrer')
+    ipcRenderer.send('importProducts', productData)
+  },
 
   // Category Logics
   getAllCategories: () => ipcRenderer.send('getAllCategories'),
